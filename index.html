@@ -4,12 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Stickerz</title>
-        <link rel="icon" href="/img/gir.png"
+        <link rel="icon" href="/img/gir.png">
+        <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
         <header id="home">
         <div class="heading">
-            <div>Stickerz</div>
+            <div class="logo">Stickerz</div>
+            
             <nav>
                 <a href="#home">Home</a>
                 <a href="#products">Products</a>
@@ -54,12 +56,14 @@
         <footer>
             <h2 id="contacts">Contact Us</h2>
             <form method="POST" action="https://formspree.io/f/xrgrewdp">
-                <label>
-                Your name: <input type="text" placeholder="Your Name" name="user-name">
+                <label for="user-name">
+                Your name: <input id="user-name" type="text" placeholder="Your Name" name="user-name">
                 </label>
-                <label>
-                    Your email: <input type="email" placeholder="Your Email" name="user-email">
+                <br>
+                <label for="email">
+                    Your email: <input id="email" type="email" placeholder="Your Email" name="user-email">
                     </label>
+                    <br>
                 <input type="submit">
             </form>
         </footer>

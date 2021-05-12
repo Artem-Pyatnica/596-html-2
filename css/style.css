@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+:root {
+    font-family: "Didact Gothic";
+    --main-color: black;
+    --accent-color: pink;
+
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    font-family: "Didact Gothic";
+    font-size: 50px;
+    text-align: center;
+}
+    
+
+.heading nav a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+
+.heading nav a :hover {
+    font-weight: bold;
+}
+
+body {
+    max-width: 980px;
+    margin: auto;
+}
+
+@media (min-width: 500px) {
+    .heading {
+        display: flex;
+    }
+
+    .heading nav {
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .heading nav a {
+        padding: 0, 20px;
+
+    }
+}
+
+header .banner {
+    background-image: url(../img/gir.png);
+    background-position: center;
+    min-height: 300px;
+    min-width: 234px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-attachment: fixed;
+}
+
+    button {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #f4511e;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+      
+      .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      
+      .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      
+      .button:hover span {
+        padding-right: 25px;
+      }
+      
+      .button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+
+
+  
+
+  .product-list article img {
+      display: block;
+      width: 100%;
+  }
+
+  .product-list article div {
+      display: flex;
+      justify-content: space-around;
+  }
+
+  @media (min-width: 600px) {
+    .product-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+    }
+
+    @media (min-width: 900px) {
+        .product-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 5px;
+        }
+  }
+
+  footer form label {
+      width: 80px;
+  }
+
