@@ -110,7 +110,11 @@ header .banner {
       display: block;
       width: 100%;
   }
-
+  .products-carousel img {
+    display: block;
+    width: 50%;
+    margin: auto;
+  }
   .product-list article div {
       display: flex;
       justify-content: space-around;

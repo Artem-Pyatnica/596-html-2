@@ -27,6 +27,19 @@
         </header>
         <main>
             <h2 id="products">Products</h2>
+             <div class="products-carousel">
+                <img src="" alt="Carosel Image">
+                <button class="carousel-prev">&lt;</button>
+                <button class="carousel-next">&gt;</button>
+            </div>
+            <button class="sort-ascending">Sort Ascending</button>
+            <button class="sort-descending">Sort Descending</button>
+            <div>
+              <label>
+                Currency<input type="text" class="currency-input" value="USD">
+              </label>
+              <button class="convert-currency">Convert</button>
+            </div>
             <div class="product-list"></div>
         </main>
         <footer>
@@ -45,5 +58,6 @@
         </footer>
         <script src="js/index.js"></script>
         <script src="js/products.js"></script>
+        <script src="js/carousel.js"></script>
     </body>
 </html>
