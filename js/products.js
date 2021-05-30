@@ -43,18 +43,29 @@ function sortDescending() {
 //    .then( () => renderProducts() );
 //}
 
-async function fetchProducts() {
-  try {
-  const response = await fetch('products.json');
-  products = await response.json();
-  await convertCurrency();
-  renderProducts();
-  } catch (err) {
-    alert(err.message);
-  }
-  renderProducts();
-}
+//async function fetchProducts() {
+//  try {
+//  const response = await fetch('products.json');
+//  products = await response.json();
+ // await convertCurrency();
+//  renderProducts();
+//  } catch (err) {
+//    alert(err.message);
+//  }
+//  renderProducts();
+//}
 
+function fetchProducts() {
+  const xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      products = JSON.parse(xhr.responseText);
+      convertCurrency().then( () => renderProducts() );
+    }
+  }
+  xhr.open('GET', 'products.json', true);
+  xhr.send();
+}
 fetchProducts();
 
 async function convertCurrency() {

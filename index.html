@@ -44,20 +44,22 @@
         </main>
         <footer>
             <h2 id="contacts">Contact Us</h2>
-            <form method="POST" action="https://formspree.io/f/xrgrewdp">
-                <label for="user-name">
-                Your name: <input id="user-name" type="text" placeholder="Your Name" name="user-name">
+            <form class="contact-form">
+                <label>
+                    User name: <input name="name" type="text" placeholder="User name" required>
                 </label>
                 <br>
-                <label for="email">
-                    Your email: <input id="email" type="email" placeholder="Your Email" name="user-email">
-                    </label>
-                    <br>
+                <label>
+                    Message: <textarea name="message" id="" cols="30" rows="10"></textarea>
+                </label>
+                <br>
                 <input type="submit">
+                <input type="reset">
             </form>
         </footer>
         <script src="js/index.js"></script>
         <script src="js/products.js"></script>
         <script src="js/carousel.js"></script>
+        <script src="js/contact.js"></script>
     </body>
 </html>
